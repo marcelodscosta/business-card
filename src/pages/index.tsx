@@ -15,6 +15,7 @@ import { IconButton } from '../components/IconButton'
 import { ProfessionalInformation } from '../components/ProfessionalInformation'
 import { Container } from '../styles/ButtonActions'
 import { HomeContainer, WraperHeaderButtons } from '../styles/pages/home'
+import { handleWhatsAppClick } from '../utils/whatsAppClick'
 
 export default function Home() {
   return (
@@ -34,7 +35,11 @@ export default function Home() {
       </WraperHeaderButtons>
 
       <Container>
-        <ButtonActions icon={WhatsAppSvg} title="WhatsApp" />
+        <ButtonActions
+          onClick={handleWhatsAppClick}
+          icon={WhatsAppSvg}
+          title="WhatsApp"
+        />
         <ButtonActions icon={InstagranSvg} title="Instagram" />
         <ButtonActions icon={WebSiteSvg} title="Site" />
         <ButtonActions icon={LinkedinSvg} title="Linkedin" />
