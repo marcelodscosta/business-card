@@ -15,6 +15,7 @@ import { IconButton } from '../components/IconButton'
 import { ProfessionalInformation } from '../components/ProfessionalInformation'
 import { Container } from '../styles/ButtonActions'
 import { HomeContainer, WraperHeaderButtons } from '../styles/pages/home'
+import { handleLinksAppClick } from '../utils/linksAppClick'
 import { handleWhatsAppClick } from '../utils/whatsAppClick'
 
 export default function Home() {
@@ -36,13 +37,33 @@ export default function Home() {
 
       <Container>
         <ButtonActions
-          onClick={handleWhatsAppClick}
+          onClick={() => handleWhatsAppClick({ phoneNumber: '5575981238271' })}
           icon={WhatsAppSvg}
           title="WhatsApp"
         />
-        <ButtonActions icon={InstagranSvg} title="Instagram" />
-        <ButtonActions icon={WebSiteSvg} title="Site" />
-        <ButtonActions icon={LinkedinSvg} title="Linkedin" />
+        <ButtonActions
+          onClick={() =>
+            handleLinksAppClick({
+              url: 'https://www.instagram.com/leondinis_andrade/',
+            })
+          }
+          icon={InstagranSvg}
+          title="Instagram"
+        />
+        <ButtonActions
+          onClick={() =>
+            handleLinksAppClick({ url: 'https://dmzsolucoes.com.br/' })
+          }
+          icon={WebSiteSvg}
+          title="Site"
+        />
+        <ButtonActions
+          onClick={() =>
+            handleLinksAppClick({ url: 'https://www.linkedin.com/' })
+          }
+          icon={LinkedinSvg}
+          title="Linkedin"
+        />
         <ButtonActions icon={EmailSvg} title="Email" />
         <ButtonActions icon={PixSvg} title="Pix" />
       </Container>
