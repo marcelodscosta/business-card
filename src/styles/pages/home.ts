@@ -7,6 +7,6 @@ export const HomeContainer = styled('main', {
 export const WraperHeaderButtons = styled('div', {
   display: 'flex',
   width: '100%',
-  marginTop: '53px',
+  marginTop: '15px',
   justifyContent: 'space-evenly',
 })
