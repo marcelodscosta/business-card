@@ -15,6 +15,7 @@ import { IconButton } from '../components/IconButton'
 import { ProfessionalInformation } from '../components/ProfessionalInformation'
 import { Container } from '../styles/ButtonActions'
 import { HomeContainer, WraperHeaderButtons } from '../styles/pages/home'
+import { handleEmailClick } from '../utils/emailAppClick'
 import { handleLinksAppClick } from '../utils/linksAppClick'
 import { handleWhatsAppClick } from '../utils/whatsAppClick'
 
@@ -64,7 +65,13 @@ export default function Home() {
           icon={LinkedinSvg}
           title="Linkedin"
         />
-        <ButtonActions icon={EmailSvg} title="Email" />
+        <ButtonActions
+          onClick={() =>
+            handleEmailClick({ email: 'contato@dmzsolucoes.com.br' })
+          }
+          icon={EmailSvg}
+          title="Email"
+        />
         <ButtonActions icon={PixSvg} title="Pix" />
       </Container>
     </HomeContainer>
