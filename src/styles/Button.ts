@@ -9,6 +9,7 @@ export const Button = styled('button', {
   borderRadius: '12px',
   fontWeight: 'bold',
   fontSize: '16px',
+  color: '$gray100',
 
   '&:hover': {
     backgroundColor: 'rgba(80, 80, 80, 0.30)',

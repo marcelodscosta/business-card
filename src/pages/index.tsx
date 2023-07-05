@@ -3,6 +3,7 @@ import QrCodeSvg from '../assets/qr-code.svg'
 import ShareSvg from '../assets/share-network.svg'
 import { Avatar } from '../components/Avatar'
 import { IconButton } from '../components/IconButton'
+import { ProfessionalInformation } from '../components/ProfessionalInformation'
 import { HomeContainer, WraperHeaderButtons } from '../styles/pages/home'
 
 export default function Home() {
@@ -12,7 +13,10 @@ export default function Home() {
         <IconButton icon={QrCodeSvg} title="QrCode" />
         <IconButton icon={ShareSvg} title="Compartilhar" />
       </WraperHeaderButtons>
+
       <Avatar img={FotoPerfil} />
+
+      <ProfessionalInformation />
     </HomeContainer>
   )
 }
