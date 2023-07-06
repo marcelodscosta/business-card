@@ -26,10 +26,15 @@ const contact = {
   phone: '075981238271',
   email: 'contato@dmzsolucoes.com.br',
   company: 'DMZ Soluções',
-  address:
-    'Rua Carlos Valadares, 554, Sala 203, Queimadinha, Feira de Santana/Ba',
+  street: 'Queimadinha',
+  city: 'Feira de Santana',
+  state: 'Bahia',
+  zipCode: '44050-000',
+  country: 'Brasil',
   website: 'https://www.dmzsolucoes.com.br',
-  photo: '',
+  photo: 'https://avatars.githubusercontent.com/u/81534727?v=4',
+  jobTitle: 'CEO',
+  notes: 'Desenvolvimento FullStack',
 }
 
 export default function Home() {
