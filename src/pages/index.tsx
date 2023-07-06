@@ -15,9 +15,22 @@ import { IconButton } from '../components/IconButton'
 import { ProfessionalInformation } from '../components/ProfessionalInformation'
 import { Container } from '../styles/ButtonActions'
 import { HomeContainer, WraperHeaderButtons } from '../styles/pages/home'
+import { createContactLink } from '../utils/createContact'
 import { handleEmailClick } from '../utils/emailAppClick'
 import { handleLinksAppClick } from '../utils/linksAppClick'
+import { handleMakeCall } from '../utils/makeCallClick'
 import { handleWhatsAppClick } from '../utils/whatsAppClick'
+
+const contact = {
+  name: 'Leodines Andrade Junior',
+  phone: '075981238271',
+  email: 'contato@dmzsolucoes.com.br',
+  company: 'DMZ Soluções',
+  address:
+    'Rua Carlos Valadares, 554, Sala 203, Queimadinha, Feira de Santana/Ba',
+  website: 'https://www.dmzsolucoes.com.br',
+  photo: '',
+}
 
 export default function Home() {
   return (
@@ -32,8 +45,16 @@ export default function Home() {
       <ProfessionalInformation />
 
       <WraperHeaderButtons>
-        <IconButton icon={AddressSvg} title="Salvar Contato" />
-        <IconButton icon={CallSvg} title="Ligar" />
+        <IconButton
+          onClick={() => createContactLink({ contact })}
+          icon={AddressSvg}
+          title="Salvar Contato"
+        />
+        <IconButton
+          onClick={() => handleMakeCall({ phone: '075981238271' })}
+          icon={CallSvg}
+          title="Ligar"
+        />
       </WraperHeaderButtons>
 
       <Container>
