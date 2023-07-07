@@ -23,6 +23,7 @@ import { handleEmailClick } from '../utils/emailAppClick'
 import { handleLinksAppClick } from '../utils/linksAppClick'
 import { handleMakeCall } from '../utils/makeCallClick'
 import { handleWhatsAppClick } from '../utils/whatsAppClick'
+import { handleWhatsAppShare } from '../utils/whatsAppShare'
 
 const contact = {
   name: 'Leodines Andrade Junior',
@@ -55,7 +56,16 @@ export default function Home() {
     <HomeContainer>
       <WraperHeaderButtons>
         <IconButton onClick={openModal} icon={QrCodeSvg} title="QrCode" />
-        <IconButton icon={ShareSvg} title="Compartilhar" />
+        <IconButton
+          onClick={() =>
+            handleWhatsAppShare({
+              text: contact.website,
+              url: '',
+            })
+          }
+          icon={ShareSvg}
+          title="Compartilhar"
+        />
       </WraperHeaderButtons>
 
       <Avatar img={FotoPerfil} />
