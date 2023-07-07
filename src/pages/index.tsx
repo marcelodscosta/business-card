@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import AddressSvg from '../assets/address-book.svg'
 import PixSvg from '../assets/cardholder.svg'
 import WebSiteSvg from '../assets/globe.svg'
@@ -12,7 +13,9 @@ import WhatsAppSvg from '../assets/whatsapp-logo.svg'
 import { Avatar } from '../components/Avatar'
 import { ButtonActions } from '../components/ButtonActions'
 import { IconButton } from '../components/IconButton'
+import { Modal } from '../components/ModalQrCode'
 import { ProfessionalInformation } from '../components/ProfessionalInformation'
+import { QrCodeShareContact } from '../components/QrCodeShareContact'
 import { Container } from '../styles/ButtonActions'
 import { HomeContainer, WraperHeaderButtons } from '../styles/pages/home'
 import { createContactLink } from '../utils/createContact'
@@ -38,10 +41,20 @@ const contact = {
 }
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const openModal = () => {
+    setIsOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsOpen(false)
+  }
+
   return (
     <HomeContainer>
       <WraperHeaderButtons>
-        <IconButton icon={QrCodeSvg} title="QrCode" />
+        <IconButton onClick={openModal} icon={QrCodeSvg} title="QrCode" />
         <IconButton icon={ShareSvg} title="Compartilhar" />
       </WraperHeaderButtons>
 
@@ -100,6 +113,9 @@ export default function Home() {
         />
         <ButtonActions icon={PixSvg} title="Pix" />
       </Container>
+      <Modal isOpen={isOpen} onClose={closeModal}>
+        <QrCodeShareContact url="http://192.168.0.105:3000/" />
+      </Modal>
     </HomeContainer>
   )
 }
