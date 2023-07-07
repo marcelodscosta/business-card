@@ -1,9 +1,9 @@
 import { styled } from '.'
 
 export const Container = styled('div', {
-  display: 'grid',
-  justifyContent: 'center',
-  justifyItems: 'center',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
   marginTop: '2.5rem',
 })
 
@@ -11,7 +11,7 @@ export const Button = styled('button', {
   display: 'flex',
   marginBottom: '1rem',
   justifyContent: 'center',
-  width: '40%',
+  width: '60%',
   alignItems: 'center',
   padding: '12px 130px',
   backgroundColor: 'rgba(80, 80, 80, 0.16)',

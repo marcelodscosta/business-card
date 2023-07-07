@@ -14,7 +14,7 @@ export const Modal = ({ isOpen, onClose, children }) => {
           icon={CloseSvg}
           style={{
             width: '100%',
-            backgroundColor: 'gray',
+            backgroundColor: 'rgba(80, 80, 80, 0.16)',
             color: '#181716',
             justifyContent: 'center',
           }}
