@@ -13,7 +13,7 @@ export const ProfessionalInformation = () => {
   return (
     <Container>
       <Title>Leodines Andrade Junior</Title>
-      <CompanyInfo>Co-fundador DMZ Soluçõs</CompanyInfo>
+      <CompanyInfo>CEO - DMZ Soluções Ltda</CompanyInfo>
       <Icon>
         <Image
           src={MapPin}

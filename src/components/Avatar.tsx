@@ -12,7 +12,7 @@ export const Avatar = ({ img }: AvatarProps) => {
         src={img}
         alt="img-perfil"
         width={120}
-        style={{ borderRadius: '50%' }}
+        style={{ borderRadius: '50%', border: '2px solid #fff' }}
       />
     </AvatarContainer>
   )

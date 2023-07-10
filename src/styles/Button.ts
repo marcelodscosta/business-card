@@ -4,12 +4,13 @@ export const Button = styled('button', {
   display: 'flex',
   alignItems: 'center',
   padding: '10px 120px',
-  backgroundColor: 'rgba(80, 80, 80, 0.16)',
+  backgroundColor: 'rgba(7, 6, 6, 0.63 )',
   border: 0,
   borderRadius: '12px',
   fontWeight: 'bold',
   fontSize: '16px',
-  color: '$gray100',
+  color: '$gray200',
+  transition: 'background-color 0.3s ease',
 
   '&:hover': {
     backgroundColor: 'rgba(80, 80, 80, 0.30)',

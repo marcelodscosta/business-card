@@ -14,7 +14,7 @@ export const Button = styled('button', {
   width: '60%',
   alignItems: 'center',
   padding: '12px 130px',
-  backgroundColor: 'rgba(80, 80, 80, 0.16)',
+  backgroundColor: 'rgba(7, 6, 6, 0.63 )',
   border: 0,
   borderRadius: '12px',
   fontWeight: 'bold',
