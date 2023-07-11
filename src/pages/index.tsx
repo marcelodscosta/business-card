@@ -6,7 +6,6 @@ import InstagranSvg from '../assets/instagram-logo.svg'
 import LinkedinSvg from '../assets/linkedin-logo.svg'
 import EmailSvg from '../assets/microsoft-outlook-logo.svg'
 import FotoPerfil from '../assets/perfil.png'
-import CallSvg from '../assets/phone-outgoing.svg'
 import QrCodeSvg from '../assets/qr-code.svg'
 import ShareSvg from '../assets/share-network.svg'
 import WhatsAppSvg from '../assets/whatsapp-logo.svg'
@@ -21,7 +20,6 @@ import { HomeContainer, WraperHeaderButtons } from '../styles/pages/home'
 import { createContactLink } from '../utils/createContact'
 import { handleEmailClick } from '../utils/emailAppClick'
 import { handleLinksAppClick } from '../utils/linksAppClick'
-import { handleMakeCall } from '../utils/makeCallClick'
 import { handleWhatsAppClick } from '../utils/whatsAppClick'
 import { handleWhatsAppShare } from '../utils/whatsAppShare'
 
@@ -72,20 +70,12 @@ export default function Home() {
 
       <ProfessionalInformation />
 
-      <WraperHeaderButtons>
-        <IconButton
+      <Container>
+        <ButtonActions
           onClick={() => createContactLink({ contact })}
           icon={AddressSvg}
-          title="Salvar Contato"
+          title="Salvar contato"
         />
-        <IconButton
-          onClick={() => handleMakeCall({ phone: '075981238271' })}
-          icon={CallSvg}
-          title="Ligar"
-        />
-      </WraperHeaderButtons>
-
-      <Container>
         <ButtonActions
           onClick={() => handleWhatsAppClick({ phoneNumber: '5575981238271' })}
           icon={WhatsAppSvg}
