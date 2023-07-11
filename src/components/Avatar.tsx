@@ -3,15 +3,16 @@ import { AvatarContainer } from '../styles/AvatarContainer'
 
 type AvatarProps = {
   img: StaticImageData
+  width?: number
 }
 
-export const Avatar = ({ img }: AvatarProps) => {
+export const Avatar = ({ img, width }: AvatarProps) => {
   return (
     <AvatarContainer>
       <Image
         src={img}
         alt="img-perfil"
-        width={120}
+        width={width || 120}
         style={{ borderRadius: '50%', border: '2px solid #fff' }}
       />
     </AvatarContainer>

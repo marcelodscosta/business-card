@@ -4,6 +4,7 @@ import PixSvg from '../assets/cardholder.svg'
 import WebSiteSvg from '../assets/globe.svg'
 import InstagranSvg from '../assets/instagram-logo.svg'
 import LinkedinSvg from '../assets/linkedin-logo.svg'
+import LogoDmz from '../assets/logo-dmz.png'
 import EmailSvg from '../assets/microsoft-outlook-logo.svg'
 import FotoPerfil from '../assets/perfil.png'
 import QrCodeSvg from '../assets/qr-code.svg'
@@ -76,6 +77,7 @@ export default function Home() {
           city={contact.city}
           state={contact.state}
         />
+        <Avatar img={LogoDmz} width={70} />
       </WraperProfessionalInformation>
       <Container>
         <ButtonActions

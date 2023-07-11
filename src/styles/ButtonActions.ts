@@ -4,7 +4,7 @@ export const Container = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  marginTop: '2.5rem',
+  marginTop: '3.5rem',
 })
 
 export const Button = styled('button', {
