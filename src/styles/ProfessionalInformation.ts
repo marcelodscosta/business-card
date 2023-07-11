@@ -4,6 +4,7 @@ export const Container = styled('div', {
   display: 'grid',
   alignContent: 'center',
   justifyItems: 'center',
+  marginTop: '2rem',
 })
 
 export const Title = styled('text', {

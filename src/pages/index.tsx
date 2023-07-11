@@ -16,6 +16,7 @@ import { Modal } from '../components/ModalQrCode'
 import { ProfessionalInformation } from '../components/ProfessionalInformation'
 import { QrCodeShareContact } from '../components/QrCodeShareContact'
 import { Container } from '../styles/ButtonActions'
+import { WraperProfessionalInformation } from '../styles/WraperProfessionalInformation'
 import { HomeContainer, WraperHeaderButtons } from '../styles/pages/home'
 import { createContactLink } from '../utils/createContact'
 import { handleEmailClick } from '../utils/emailAppClick'
@@ -67,15 +68,15 @@ export default function Home() {
       </WraperHeaderButtons>
 
       <Avatar img={FotoPerfil} />
-
-      <ProfessionalInformation
-        name={contact.name}
-        job={contact.jobTitle}
-        company={contact.company}
-        city={contact.city}
-        state={contact.state}
-      />
-
+      <WraperProfessionalInformation>
+        <ProfessionalInformation
+          name={contact.name}
+          job={contact.jobTitle}
+          company={contact.company}
+          city={contact.city}
+          state={contact.state}
+        />
+      </WraperProfessionalInformation>
       <Container>
         <ButtonActions
           onClick={() => createContactLink({ contact })}
