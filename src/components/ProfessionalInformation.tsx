@@ -9,18 +9,32 @@ import {
 import Image from 'next/image'
 import MapPin from '../assets/map-pin.svg'
 
-export const ProfessionalInformation = () => {
+type ProfessionalInformationProps = {
+  name: string
+  job: string
+  company: string
+  city: string
+  state: string
+}
+
+export const ProfessionalInformation = ({
+  name,
+  job,
+  company,
+  city,
+  state,
+}: ProfessionalInformationProps) => {
   return (
     <Container>
-      <Title>Leodines Andrade Junior</Title>
-      <CompanyInfo>CEO - DMZ Soluções Ltda</CompanyInfo>
+      <Title>{name}</Title>
+      <CompanyInfo>{`${job} - ${company}`}</CompanyInfo>
       <Icon>
         <Image
           src={MapPin}
           alt="localization"
           style={{ borderColor: '#fff' }}
         />
-        <Localization>Feira de Santana/Bahia</Localization>
+        <Localization>{`${city}/${state}`}</Localization>
       </Icon>
     </Container>
   )

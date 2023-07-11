@@ -68,7 +68,13 @@ export default function Home() {
 
       <Avatar img={FotoPerfil} />
 
-      <ProfessionalInformation />
+      <ProfessionalInformation
+        name={contact.name}
+        job={contact.jobTitle}
+        company={contact.company}
+        city={contact.city}
+        state={contact.state}
+      />
 
       <Container>
         <ButtonActions
