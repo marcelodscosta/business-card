@@ -14,6 +14,7 @@ export const Avatar = ({ img, width }: AvatarProps) => {
         alt="img-perfil"
         width={width || 120}
         style={{ borderRadius: '50%', border: '2px solid #fff' }}
+        priority
       />
     </AvatarContainer>
   )
