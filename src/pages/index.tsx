@@ -59,7 +59,7 @@ export default function Home() {
         <IconButton
           onClick={() =>
             handleWhatsAppShare({
-              text: contact.website,
+              text: 'https://business-card-two-kappa.vercel.app/',
               url: '',
             })
           }
