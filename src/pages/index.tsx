@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import AddressSvg from '../assets/address-book.svg'
 import PixSvg from '../assets/cardholder.svg'
 import WebSiteSvg from '../assets/globe.svg'
@@ -12,10 +11,9 @@ import ShareSvg from '../assets/share-network.svg'
 import WhatsAppSvg from '../assets/whatsapp-logo.svg'
 import { Avatar } from '../components/Avatar'
 import { ButtonActions } from '../components/ButtonActions'
+import { DialogModal } from '../components/DialogModal'
 import { IconButton } from '../components/IconButton'
-import { Modal } from '../components/ModalQrCode'
 import { ProfessionalInformation } from '../components/ProfessionalInformation'
-import { QrCodeShareContact } from '../components/QrCodeShareContact'
 import { Container } from '../styles/ButtonActions'
 import { WraperProfessionalInformation } from '../styles/WraperProfessionalInformation'
 import { HomeContainer, WraperHeaderButtons } from '../styles/pages/home'
@@ -42,20 +40,11 @@ const contact = {
 }
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const openModal = () => {
-    setIsOpen(true)
-  }
-
-  const closeModal = () => {
-    setIsOpen(false)
-  }
-
   return (
     <HomeContainer>
       <WraperHeaderButtons>
-        <IconButton onClick={openModal} icon={QrCodeSvg} title="QrCode" />
+        {/* <IconButton onClick={openModal} icon={QrCodeSvg} title="QrCode" /> */}
+        <DialogModal icon={QrCodeSvg} title="QrCode" />
         <IconButton
           onClick={() =>
             handleWhatsAppShare({
@@ -122,9 +111,6 @@ export default function Home() {
         />
         <ButtonActions icon={PixSvg} title="Pix" />
       </Container>
-      <Modal isOpen={isOpen} onClose={closeModal}>
-        <QrCodeShareContact url="https://business-card-two-kappa.vercel.app/" />
-      </Modal>
     </HomeContainer>
   )
 }
