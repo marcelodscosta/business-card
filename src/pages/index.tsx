@@ -123,7 +123,7 @@ export default function Home() {
         <ButtonActions icon={PixSvg} title="Pix" />
       </Container>
       <Modal isOpen={isOpen} onClose={closeModal}>
-        <QrCodeShareContact url="http://192.168.0.105:3000/" />
+        <QrCodeShareContact url="https://business-card-two-kappa.vercel.app/" />
       </Modal>
     </HomeContainer>
   )
